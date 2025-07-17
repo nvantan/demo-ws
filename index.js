@@ -18,10 +18,16 @@ var StratumProxyServer = /** @class */ (function () {
         this.pythonClients = new Map();
         this.connectionCounter = 0;
         this.port = port;
-        this.httpServer = http.createServer();
+        this.httpServer = this.createServer();
         this.wsServer = new ws_1.WebSocketServer({ server: this.httpServer });
         this.setupWebSocketServer();
     }
+    StratumProxyServer.prototype.createServer = function () {
+        return http.createServer(function (req, res) {
+            res.writeHead(200, { "Content-Type": "text/plain" });
+            res.end("Hello word!\n");
+        });
+    };
     StratumProxyServer.prototype.setupWebSocketServer = function () {
         var _this = this;
         this.wsServer.on('connection', function (ws, req) {
