@@ -1,0 +1,22 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "Ws",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.8",
+    "@types/ws": "^8.5.10",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [],
+  "author": "Developer",
+  "license": "MIT"
+}
